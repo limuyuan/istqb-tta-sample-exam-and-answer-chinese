@@ -3,7 +3,7 @@
 - [ISTQB<sup>®</sup>CTAL 2012 Technical Test Analyst Sample Exam Questions_v1_01 (English).pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%8B%9F%E9%A2%98%E6%96%87%E6%A1%A3/ISTQB%C2%AECTAL%202012%20Technical%20Test%20Analyst%20Sample%20Exam%20Questions_v1_01%20(English).pdf)
 - [ISTQB<sup>®</sup>CTAL 2012 Technical Test Analyst Sample Exam-Answer and Justification_v1_02 (English).pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%8B%9F%E9%A2%98%E6%96%87%E6%A1%A3/ISTQB%C2%AECTAL%202012%20Technical%20Test%20Analyst%20Sample%20Exam-Answer%20and%20Justification_v1_02%20(English).pdf)
 - [ISTQB<sup>®</sup>2012高级-测试分析师 模拟题v1_02版（中文）.pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%8B%9F%E9%A2%98%E6%96%87%E6%A1%A3/ISTQB%C2%AE2012%E9%AB%98%E7%BA%A7-%E6%B5%8B%E8%AF%95%E5%88%86%E6%9E%90%E5%B8%88%20%E6%A8%A1%E6%8B%9F%E9%A2%98v1_02%E7%89%88%EF%BC%88%E4%B8%AD%E6%96%87%EF%BC%89.pdf)
-
+- [ISTQB<sup>®</sup> 高级-技术测试分析师大纲2012版（中文版）.pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E5%A4%A7%E7%BA%B2%E6%96%87%E6%A1%A3/ISTQB%C2%AE%20%E9%AB%98%E7%BA%A7-%E6%8A%80%E6%9C%AF%E6%B5%8B%E8%AF%95%E5%88%86%E6%9E%90%E5%B8%88%E5%A4%A7%E7%BA%B22012%E7%89%88%EF%BC%88%E4%B8%AD%E6%96%87%E7%89%88%EF%BC%89.pdf)
 
 # 翻译进度
 总体进度(5/35)
@@ -66,7 +66,7 @@
 - A. 正确：根据大纲描述。TTA最可能与项目上的技术人员（包括开发者）一起工作；
 - B. 不正确：属于TA的职责；
 - C. 不正确：属于TA的职责；
-- D. 不正确：属于TA的职责；
+- D. 不正确：属于TA的职责。
 
 分值：1分
 
@@ -123,7 +123,7 @@ Else
 - A. 1，4；
 - B. 1，2或1，3；
 - C. 1，2，3，4；
-- D. 2，3
+- D. 2，3。
 
 **解释:**
 - A. 正确：根据大纲描述。这两组测试既对每个原子条件值进行了测试（条件覆盖），也对判定结果值进行了测试（判定覆盖）；
@@ -160,14 +160,14 @@ Else
   不进行抓拍
 ```
 
-根据以上信息，下面哪个组合可以用最少的测试来达到100%的改进的条件/判定(MC/DC)覆盖率？
+根据以上信息，下面哪个组合可以用最少的测试来达到100%的改进的条件/判定测试(MC/DC)覆盖率？
 
 **答案选项：**
 
 - A. 3，4，5，7；
 - B. 1，3，8；
 - C. 2，8；
-- D. 1，5，7，8
+- D. 1，5，7，8。
 
 **解释：**
 
@@ -176,10 +176,50 @@ Else
   - (T or F) + F
   - (F or T) + T
   - (F or F) + T
-  
+
   从而用最少的测试，既测试到了原子条件的所有取值，也测试到了所有的判定结果；
 - B. 不正确：覆盖了所有判定结果，但是没有覆盖到单个原子条件改变判定结果的情况；
 - C. 不正确：没有完全覆盖到单个原子条件改变判定结果的情况；
 - D. 不正确：没有完全覆盖到单个原子条件改变判定结果的情况；
 
 分值：1分
+
+### 6. CTAL-TTA_LO-2.5.1
+
+> TTA-2.5.1 (K3) 应用复合条件测试的测试设计技术设计测试用例以达到规定的覆盖率
+
+你正在测试一个用于十字路口交通管制的摄像抓拍系统。需求如下：红灯(RED)，或者汽车超速(SPEED)，并且汽车前轮越过十字路口界线(WHEELS)，则进行一次抓拍。
+
+考虑下面这些值的组合：
+1. RED + SPEED + WHEELS
+2. RED + SPEED + not WHEELS
+3. RED + not SPEED + WHEELS
+4. RED + not SPEED + not WHEELS
+5. not RED + SPEED + WHEELS
+6. not RED + SPEED + not WHEELS
+7. not RED + not SPEED + WHEELS
+8. not RED + not SPEED + not WHEELS
+
+假设代码逻辑如下：
+
+```
+if ((RED or SPEED) and WHEELS) then
+  进行抓拍
+Else
+  不进行抓拍
+```
+
+根据以上信息，下面哪个组合可以用最少的测试来达到100%的复合条件测试覆盖率？
+
+**答案选项**
+
+- A. 所有组合
+- B. 3，4，5，7；
+- C. 1，3，8；
+- D. 1，5，7，8。
+
+**解释：**
+
+- A. 正确：复合条件测试需要对整个真值表（所有真与假的组合）进行测试。这需要本题中所有的组合都被测试到。
+- B、C、D：不正确。
+
