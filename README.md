@@ -4,11 +4,12 @@
 - [ISTQB<sup>®</sup>CTAL 2012 Technical Test Analyst Sample Exam-Answer and Justification_v1_02 (English).pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%8B%9F%E9%A2%98%E6%96%87%E6%A1%A3/ISTQB%C2%AECTAL%202012%20Technical%20Test%20Analyst%20Sample%20Exam-Answer%20and%20Justification_v1_02%20(English).pdf)
 - [ISTQB<sup>®</sup>2012高级-测试分析师 模拟题v1_02版（中文）.pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%8B%9F%E9%A2%98%E6%96%87%E6%A1%A3/ISTQB%C2%AE2012%E9%AB%98%E7%BA%A7-%E6%B5%8B%E8%AF%95%E5%88%86%E6%9E%90%E5%B8%88%20%E6%A8%A1%E6%8B%9F%E9%A2%98v1_02%E7%89%88%EF%BC%88%E4%B8%AD%E6%96%87%EF%BC%89.pdf)
 - [ISTQB<sup>®</sup> 高级-技术测试分析师大纲2012版（中文版）.pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E5%A4%A7%E7%BA%B2%E6%96%87%E6%A1%A3/ISTQB%C2%AE%20%E9%AB%98%E7%BA%A7-%E6%8A%80%E6%9C%AF%E6%B5%8B%E8%AF%95%E5%88%86%E6%9E%90%E5%B8%88%E5%A4%A7%E7%BA%B22012%E7%89%88%EF%BC%88%E4%B8%AD%E6%96%87%E7%89%88%EF%BC%89.pdf)
+- [ISTQB<sup>®</sup> Advanced Level Syllabus-Technical Test Analyst-2012Version(English)](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E5%A4%A7%E7%BA%B2%E6%96%87%E6%A1%A3/ISTQB%C2%AE%20Advanced%20Level%20Syllabus-Technical%20Test%20Analyst-2012Version(English).pdf)
 
 # 翻译进度
-总体进度(7/35)
+总体进度(8/35)
 1. 测试技术分析师在基于风险的测试中的任务 (2/2)
-2. 基于结构的测试 (5/7)
+2. 基于结构的测试 (6/7)
 3. 分析技术 (0/5)
 4. 技术测试的质量特性 (0/8)
 5. 评审 (0/3)
@@ -269,3 +270,33 @@ Else
 - D. 不正确：只测试了为真的情况，没有测试为假的情况。
 
 分值：2分
+
+### 8. CTAL-TTA_LO-2.7.1
+
+> TTA-2.7.1 (K2) 理解API测试的适用性以及它所能发现的各种缺陷。
+
+**问题：**
+
+API测试的目标是发现下面哪些缺陷？请选择**三个**选项。
+
+**答案选项：**
+
+- A. 数据处理错误；
+- B. 时序问题；
+- C. 交易的丢失；
+- D. 与代码标准的不一致；
+- E. 可用性不足；
+- F. 安装缺陷；
+- G. GUI失效。
+
+**解释：**
+
+- A. 正确：此条已在大纲“缺陷类型”中列出；
+- B. 正确：此条已在大纲“缺陷类型”中列出；
+- C. 正确：此条已在大纲“缺陷类型”中列出；
+- D. 不正确：这是可维护性测试的目标；
+- E. 不正确：此条未在大纲“缺陷类型”中列出；
+- F. 不正确：此条未在大纲“缺陷类型”中列出；
+- G. 不正确：此条未在大纲“缺陷类型”中列出。
+
+分值：1
