@@ -1,3 +1,19 @@
+# 翻译参考材料
+- [ISTQB<sup>®</sup>高级模拟题文档 - CSTQB](https://www.cstqb.cn/AL%20Simulation.html)
+- [ISTQB<sup>®</sup>CTAL 2012 Technical Test Analyst Sample Exam Questions_v1_01 (English).pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%8B%9F%E9%A2%98%E6%96%87%E6%A1%A3/ISTQB%C2%AECTAL%202012%20Technical%20Test%20Analyst%20Sample%20Exam%20Questions_v1_01%20(English).pdf)
+- [ISTQB<sup>®</sup>CTAL 2012 Technical Test Analyst Sample Exam-Answer and Justification_v1_02 (English).pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%8B%9F%E9%A2%98%E6%96%87%E6%A1%A3/ISTQB%C2%AECTAL%202012%20Technical%20Test%20Analyst%20Sample%20Exam-Answer%20and%20Justification_v1_02%20(English).pdf)
+- [ISTQB<sup>®</sup>2012高级-测试分析师 模拟题v1_02版（中文）.pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%8B%9F%E9%A2%98%E6%96%87%E6%A1%A3/ISTQB%C2%AE2012%E9%AB%98%E7%BA%A7-%E6%B5%8B%E8%AF%95%E5%88%86%E6%9E%90%E5%B8%88%20%E6%A8%A1%E6%8B%9F%E9%A2%98v1_02%E7%89%88%EF%BC%88%E4%B8%AD%E6%96%87%EF%BC%89.pdf)
+
+
+# 翻译进度
+总体进度(3/35)
+1. 测试技术分析师在基于风险的测试中的任务 (2/2)
+2. 基于结构的测试 (1/7)
+3. 分析技术 (0/5)
+4. 技术测试的质量特性 (0/8)
+5. 评审 (0/3)
+6. 测试工具及自动化 (0/10)
+
 # TTA模拟题
 
 ### 1.	CTAL-TTA_LO-1.3.1
