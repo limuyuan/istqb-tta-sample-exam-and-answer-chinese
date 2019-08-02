@@ -4,12 +4,12 @@
 - [ISTQB<sup>®</sup>CTAL 2012 Technical Test Analyst Sample Exam-Answer and Justification_v1_02 (English).pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%8B%9F%E9%A2%98%E6%96%87%E6%A1%A3/ISTQB%C2%AECTAL%202012%20Technical%20Test%20Analyst%20Sample%20Exam-Answer%20and%20Justification_v1_02%20(English).pdf)
 - [ISTQB<sup>®</sup>2012高级-测试分析师 模拟题v1_02版（中文）.pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%8B%9F%E9%A2%98%E6%96%87%E6%A1%A3/ISTQB%C2%AE2012%E9%AB%98%E7%BA%A7-%E6%B5%8B%E8%AF%95%E5%88%86%E6%9E%90%E5%B8%88%20%E6%A8%A1%E6%8B%9F%E9%A2%98v1_02%E7%89%88%EF%BC%88%E4%B8%AD%E6%96%87%EF%BC%89.pdf)
 - [ISTQB<sup>®</sup> 高级-技术测试分析师大纲2012版（中文版）.pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E5%A4%A7%E7%BA%B2%E6%96%87%E6%A1%A3/ISTQB%C2%AE%20%E9%AB%98%E7%BA%A7-%E6%8A%80%E6%9C%AF%E6%B5%8B%E8%AF%95%E5%88%86%E6%9E%90%E5%B8%88%E5%A4%A7%E7%BA%B22012%E7%89%88%EF%BC%88%E4%B8%AD%E6%96%87%E7%89%88%EF%BC%89.pdf)
-- [ISTQB<sup>®</sup> Advanced Level Syllabus-Technical Test Analyst-2012Version(English)](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E5%A4%A7%E7%BA%B2%E6%96%87%E6%A1%A3/ISTQB%C2%AE%20Advanced%20Level%20Syllabus-Technical%20Test%20Analyst-2012Version(English).pdf)
+- [ISTQB<sup>®</sup> Advanced Level Syllabus-Technical Test Analyst-2012Version(English).pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E5%A4%A7%E7%BA%B2%E6%96%87%E6%A1%A3/ISTQB%C2%AE%20Advanced%20Level%20Syllabus-Technical%20Test%20Analyst-2012Version(English).pdf)
 
 # 翻译进度
-总体进度(8/35)
+总体进度(9/35)
 1. 测试技术分析师在基于风险的测试中的任务 (2/2)
-2. 基于结构的测试 (6/7)
+2. 基于结构的测试 (7/7)
 3. 分析技术 (0/5)
 4. 技术测试的质量特性 (0/8)
 5. 评审 (0/3)
@@ -287,7 +287,7 @@ API测试的目标是发现下面哪些缺陷？请选择**三个**选项。
 - D. 与代码标准的不一致；
 - E. 可用性不足；
 - F. 安装缺陷；
-- G. GUI失效。
+- G. GUI故障。
 
 **解释：**
 
@@ -300,3 +300,27 @@ API测试的目标是发现下面哪些缺陷？请选择**三个**选项。
 - G. 不正确：此条未在大纲“缺陷类型”中列出。
 
 分值：1
+
+### 9. CTAL-TTA_LO-2.8.1
+
+> TTA-2.8.1 (K4) 基于特定的项目状况选择一种适合的基于结构的测试技术。
+
+**问题：**
+
+你是一名技术测试分析师，你正在测试一款能够控制屋盖移动的软件，这款软件将被用于新建成的能够容纳十万名观众的国家体育场。一项失效分析表明，如果软件系统失效，将可能导致屋盖碎裂并砸落到观众身上。为此政府部门要求，对这个软件进行的测试必须要超过根据通常<u>相关</u>规定标准所需进行的测试。
+
+在测试这款控制体育场屋盖移动的软件时，你应该考虑使测试达到下面哪种测试覆盖级别？
+
+**答案选项：**
+- A. 复合条件覆盖
+- B. 分支覆盖 + 改进的条件/判定(MC/DC)覆盖
+- C. 分支覆盖 + 语句覆盖
+- D. 改进的条件/判定(MC/DC)覆盖
+
+**解释：**
+- A. 正确：本题中，如软件失效，可能会造成几千名观众受伤或死亡的严重后果。对于最高关键等级的软件，在大纲提到的两种示例标准（译者注：DO-178B或欧洲标准ED-12B、IEC-61508，见中文版大纲16-17页）中，都要求达到MC/DC覆盖。而复合条件测试提供了比MC/DC更高的覆盖等级，满足本场景中“超过”MC/DC（根据通常相关规定标准所需进行的测试）的要求，因而为正确选项；
+- B. 不正确：MC/DC覆盖（见选项D）包括了分支覆盖；
+- C. 不正确：分支覆盖包含了语句覆盖。同时，分支覆盖不如MC/DC和复合条件覆盖更严格；
+- D. 不正确：对于最高关键等级的软件，在大纲提到的两种示例标准中，都要求达到MC/DC覆盖。但是在本场景中，要求的测试覆盖等级需要超过MC/DC，因此本选项不正确。
+
+分值：2分
