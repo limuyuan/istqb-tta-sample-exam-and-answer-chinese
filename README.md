@@ -7,10 +7,10 @@
 - [ISTQB<sup>®</sup> Advanced Level Syllabus-Technical Test Analyst-2012Version(English).pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E5%A4%A7%E7%BA%B2%E6%96%87%E6%A1%A3/ISTQB%C2%AE%20Advanced%20Level%20Syllabus-Technical%20Test%20Analyst-2012Version(English).pdf)
 
 # 翻译进度
-总体进度(10/35)
+总体进度(11/35)
 1. 测试技术分析师在基于风险的测试中的任务 (2/2)
 2. 基于结构的测试 (7/7)
-3. 分析技术 (1/5)
+3. 分析技术 (2/5)
 4. 技术测试的质量特性 (0/8)
 5. 评审 (0/3)
 6. 测试工具及自动化 (0/10)
@@ -333,27 +333,27 @@ API测试的目标是发现下面哪些缺陷？请选择**三个**选项。
 
 下面是TRICKY程序的伪代码：
 ```
-program TRICKY
-var1, var2, var3 : integer
-begin
-    read(var2)
-    read(var1)
-    while var2 < 10 loop
-        var3 = var2 + var1
-        var2 = 4
-        var1 = var2 + 1
-        print(var3)
-        if var1 = 5 then
-            pring(var1)
-        else
-            print(var1+1)
-        endif
-        var2 = var2 + 1
-    endloop
-    write("哇，这也太复杂了吧！")
-    write("但是答案是...")
-    write(var2 + var1)
-end program TRICKY
+0   program TRICKY
+1   var1, var2, var3 : integer
+2   begin
+3       read(var2)
+4       read(var1)
+5       while var2 < 10 loop
+6           var3 = var2 + var1
+7           var2 = 4
+8           var1 = var2 + 1
+9           print(var3)
+10          if var1 = 5 then
+11              pring(var1)
+12          else
+13              print(var1+1)
+14          endif
+15          var2 = var2 + 1
+16      endloop
+17      write("哇，这也太复杂了吧！")
+18      write("但是答案是...")
+19      write(var2 + var1)
+20  end program TRICKY
 ```
 
 下面关于TRICKY程序的陈述中，哪句最正确地描述了代码中存在的控制流异常？
@@ -367,8 +367,72 @@ end program TRICKY
 
 **解释：**
 
-- A. 正确：第10行代码(`if var1 = 5 then`)的判断结果始终为`true`，因为`var1`在第10行的值始终为`5`，因此第13行代码(`print(var1+1)`)不可到达。第5行的循环(`while var2 < 10 loop`)只有当`var2`大于等于`10`的时候才会离开循环，但是每次经过第7行代码(`var2 = 4`)时，`var2`的值都会被重新设置为`4`，只是每次循环到第15行代码(`var2 = var2 + 1`)的时候才增加了`1`，因此`var2`的值最多只能到`5`；
+- A. 正确：第10行代码的判断结果始终为`true`，因为`var1`在第10行的值始终为`5`，因此第13行代码不可到达。第5行的循环只有当`var2`大于等于`10`的时候才会离开循环，但是每次经过第7行代码时，`var2`的值都会被重新设置为`4`，只是每次循环到第15行代码的时候才增加了`1`，因此`var2`的值最多只能到达`5`；
 - B、C、D：不正确。
 
 分值：2分
 
+### 11. CTAL-TTA_LO-3.2.2
+
+> TTA-3.2.2 (K3) 运用数据流分析来检测代码是否存在数据流异常
+
+**问题：**
+
+下面是用于计算并打印销售佣金的程序的伪代码：
+
+```
+0   program Calculate Commission
+1   total, number : integer
+2   commission_hi, commission_lo : real
+3   begin
+4       read(number)
+5       while number ≠ -1 loop
+6           total = total + number
+7           read(number)
+8       endloop
+9       if toal > 1000 then
+10          commission_hi = 100 + 0.2 * (total - 1000)
+11      else
+12          commission_lo = 0.15 * total
+13      endif
+14      write("销售佣金为：")
+15      write(commission_hi)
+16  end program Calculate Commission
+```
+
+下面哪个选项正确列出了计算佣金程序中存在的数据流异常？
+
+**答案选项：**
+
+- A. total: 第6行; commission_lo: 第12行; commission_hi: 第15行；
+- B. commission_hi: 第10行; commission_lo: 第6行；
+- C. number: 第5行; number: 第6行
+- D. total: 第6行; commission_hi: 第10行; commission_lo: 第12行
+
+**解释：**
+```
+0   program Calculate Commission
+1   total, number : integer
+2   commission_hi, commission_lo : real
+3   begin                                                   number(d)
+4       read(number)                                        number(u)
+5       while number ≠ -1 loop                              total(u,d); number(u)
+6           total = total + number                          number(d)
+7           read(number)
+8       endloop
+9       if toal > 1000 then                                 total(u)
+10          commission_hi = 100 + 0.2 * (total - 1000)      commission_hi(d)
+11      else
+12          commission_lo = 0.15 * total                    commission_lo(d); total(u)
+13      endif
+14      write("销售佣金为：")
+15      write(commission_hi)                                commission_hi(u)
+16  end program Calculate Commission
+```
+- A. 正确：控制流异常如下：
+    - total：在第6行被使用，但使用前未被定义；
+    - commission_lo：在第12行被定义，但之后未被使用；
+    - commission_hi：在第15行被使用，但是如果程序走的是第12行的分支而不是第10行，则使用前未被定义。
+- B、C、D：不正确。
+
+分值：2分
