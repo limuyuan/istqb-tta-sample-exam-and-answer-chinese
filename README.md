@@ -414,11 +414,11 @@ API测试的目标是发现下面哪些缺陷？请选择**三个**选项。
 0   program Calculate Commission
 1   total, number : integer
 2   commission_hi, commission_lo : real
-3   begin                                                   number(d)
-4       read(number)                                        number(u)
-5       while number ≠ -1 loop                              total(u,d); number(u)
-6           total = total + number                          number(d)
-7           read(number)
+3   begin
+4       read(number)                                        number(d)
+5       while number ≠ -1 loop                              number(u)
+6           total = total + number                          total(u,d); number(u)
+7           read(number)                                    number(d)
 8       endloop
 9       if toal > 1000 then                                 total(u)
 10          commission_hi = 100 + 0.2 * (total - 1000)      commission_hi(d)
