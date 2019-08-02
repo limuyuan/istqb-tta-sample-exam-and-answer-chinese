@@ -7,10 +7,10 @@
 - [ISTQB<sup>®</sup> Advanced Level Syllabus-Technical Test Analyst-2012Version(English).pdf](https://www.cstqb.cn/userfiles/files/ISTQB%E9%AB%98%E7%BA%A7%E5%A4%A7%E7%BA%B2%E6%96%87%E6%A1%A3/ISTQB%C2%AE%20Advanced%20Level%20Syllabus-Technical%20Test%20Analyst-2012Version(English).pdf)
 
 # 翻译进度
-总体进度(9/35)
+总体进度(10/35)
 1. 测试技术分析师在基于风险的测试中的任务 (2/2)
 2. 基于结构的测试 (7/7)
-3. 分析技术 (0/5)
+3. 分析技术 (1/5)
 4. 技术测试的质量特性 (0/8)
 5. 评审 (0/3)
 6. 测试工具及自动化 (0/10)
@@ -324,3 +324,51 @@ API测试的目标是发现下面哪些缺陷？请选择**三个**选项。
 - D. 不正确：对于最高关键等级的软件，在大纲提到的两种示例标准中，都要求达到MC/DC覆盖。但是在本场景中，要求的测试覆盖等级需要超过MC/DC，因此本选项不正确。
 
 分值：2分
+
+### 10. CTAL-TTA_LO-3.2.1
+
+> TTA-3.2.1 (K3) 运用控制流分析来检测代码是否存在控制流异常。
+
+**问题：**
+
+下面是TRICKY程序的伪代码：
+```
+program TRICKY
+var1, var2, var3 : integer
+begin
+    read(var2)
+    read(var1)
+    while var2 < 10 loop
+        var3 = var2 + var1
+        var2 = 4
+        var1 = var2 + 1
+        print(var3)
+        if var1 = 5 then
+            pring(var1)
+        else
+            print(var1+1)
+        endif
+        var2 = var2 + 1
+    endloop
+    write("哇，这也太复杂了吧！")
+    write("但是答案是...")
+    write(var2 + var1)
+end program TRICKY
+```
+
+下面关于TRICKY程序的陈述中，哪句最正确地描述了代码中存在的控制流异常？
+
+**答案选项：**
+
+- A. TRICKY程序中包含不可到达语句和一个无限循环
+- B. TRICKY程序中不包含控制流异常
+- C. TRICKY程序中包含不可到达语句
+- D. TRICKY程序中包含一个有多个入口的循环体
+
+**解释：**
+
+- A. 正确：第10行代码(`if var1 = 5 then`)的判断结果始终为`true`，因为`var1`在第10行的值始终为`5`，因此第13行代码(`print(var1+1)`)不可到达。第5行的循环(`while var2 < 10 loop`)只有当`var2`大于等于`10`的时候才会离开循环，但是每次经过第7行代码(`var2 = 4`)时，`var2`的值都会被重新设置为`4`，只是每次循环到第15行代码(`var2 = var2 + 1`)的时候才增加了`1`，因此`var2`的值最多只能到`5`；
+- B、C、D：不正确。
+
+分值：2分
+
