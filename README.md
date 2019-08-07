@@ -3,7 +3,11 @@
 
 # ISTQB TTA模拟题（中文版）
 
+https://github.com/limuyuan/istqb-tta-sample-exam-and-answer-chinese/blob/master/ISTQB_TTA_Question_Answer.md
+
 # ISTQB TTA模拟题及答案（中文版）
+
+https://github.com/limuyuan/istqb-tta-sample-exam-and-answer-chinese/blob/master/ISTQB_TTA_Question_Only.md
 
 # 翻译参考材料
 
